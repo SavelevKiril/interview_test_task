@@ -73,8 +73,9 @@ semilogy(expParams.snrDbRange, awgnBer);
 % Accumulate legend
 legendList = [legendList; "AWGN BER"];
 
-% Put legend, apply limits
+% Put legend, apply limits, specify axis
 legend(legendList); grid on; ylim([1e-5 1])
+xlabel("SNR, dB"); ylabel("BER");
 
 % Save figure
 saveas(fig, "results.png");
